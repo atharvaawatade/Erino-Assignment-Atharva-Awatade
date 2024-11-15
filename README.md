@@ -59,7 +59,7 @@ The **Erino Contact Management System** is a full-stack web application designed
 
 ---
 
-## **What We Achieved**
+## **What I Achieved**
 
 This project demonstrates the following:
 1. **Full-Stack Development**:
