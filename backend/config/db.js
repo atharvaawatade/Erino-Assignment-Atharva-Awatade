@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = ' ';
+const mongoURI = 'add your string link here from compass';
 
 const connectDB = async () => {
   try {
