@@ -1,4 +1,3 @@
-// backend/server.js
 const express = require('express');
 const connectDB = require('./config/db');
 const cors = require('cors');
@@ -6,7 +5,7 @@ const contactRoutes = require('./routes/contacts');
 
 const app = express();
 
-connectDB(); // Connect to MongoDB
+connectDB(); 
 
 app.use(cors());
 app.use(express.json());
