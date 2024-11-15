@@ -1,9 +1,7 @@
-// backend/routes/contacts.js
 const express = require('express');
 const router = express.Router();
 const Contact = require('../models/Contact');
 
-// Get all contacts
 router.get('/', async (req, res) => {
   try {
     const contacts = await Contact.find();
@@ -13,7 +11,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Add a new contact
 router.post('/', async (req, res) => {
   const { firstName, lastName, email, phoneNumber, company, jobTitle } = req.body;
 
@@ -22,7 +19,7 @@ router.post('/', async (req, res) => {
       firstName,
       lastName,
       email,
-      phoneNumber, // Changed to match frontend
+      phoneNumber,
       company,
       jobTitle,
     });
@@ -33,7 +30,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Update a contact by ID
 router.put('/:id', async (req, res) => {
   try {
     const updatedContact = await Contact.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -43,7 +39,6 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete a contact by ID
 router.delete('/:id', async (req, res) => {
   try {
     const deletedContact = await Contact.findByIdAndDelete(req.params.id);
